@@ -20,6 +20,6 @@ class ImageStorage(FileSystemStorage):
         fn = time.strftime('%Y%m%d%H%M%S')
         fn = fn + '_%d' % random.randint(0,100)
         # 重写合成文件名
-        name = os.path.join(d, fn + ext)
+        name = os.path.join(d, fn + ext)  
         # 调用父类方法
         return super(ImageStorage, self)._save(name, content)
